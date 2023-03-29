@@ -6,6 +6,7 @@
     <title>Alex Contussi </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <style>
@@ -19,12 +20,14 @@ body{background-color:#282C33;height: 200vh;color:#FFF;font-family:'fira code';}
 .line{background-color: #96FAF6; height: 2px; width: 66%; display: inline-block; margin-left: 2%;}
 .w35{width:35%!important}
 #projets{margin-left:7%}
+img{border-radius: 20px;}
 #carousel {
   position: relative;
   height: 800px;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   overflow: hidden; 
+  margin-left: -7%;
 }
 #carousel div {
     position: absolute;
@@ -80,11 +83,15 @@ body{background-color:#282C33;height: 200vh;color:#FFF;font-family:'fira code';}
 }
 #carousel div.nextRightSecond img { width: 200px; }
 .buttons {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px; 
+    margin-top: 3%;
+    text-align: center;
+    margin-left: -7%;
 }
+#contact {
+  margin-left: 7%;grid-template-columns: repeat(2,1fr);
+}
+.mb10{margin-bottom:10px}
+.tRight{text-align:right}
 
 </style>
 <div id="profil" class="grids">
@@ -135,11 +142,35 @@ body{background-color:#282C33;height: 200vh;color:#FFF;font-family:'fira code';}
         </div>
     </div>
     <div class="buttons">
-        <button id="prev">Prev</button>
-        <button id="next">Next</button>
+        <button id="prev" class="btn btn-light">Prev</button>
+        <button id="next" class="btn btn-light">Next</button>
     </div>
 </div>
+<div id="contact" class="grids">
+    <div class="tLeft">
+        <h2><span class="colorBlue">#</span>Skills<span class="line w35"></span></h2>
+        <div style="text-align:center"><img class="mTop" src="motif.png" height="240"/></div>
+    </div>
+    <div style="padding: 5%;text-align: center;">
+        <div class="mb10">Symfony</div>
+        <div class="mb10">PHP</div>
+        <div class="mb10">Doctrine</div>
+        <div class="mb10">Javascript</div>
+        <div class="mb10">HTML</div>
+        <div class="mb10">CSS</div>
+        <div class="mb10">SQL</div>
+        <div>Java</div>
+    </div>
 
+    <div style="padding: 20%;text-align: center;">
+        <div style="padding:10%;border:1px solid #FFF">alexcontussi01032000@gmail.com</div>
+    </div>
+    <div class="tLeft mTop">
+        <h2><span class="colorBlue">#</span>Contact<span class="line w35"></span></h2>
+        <div style="text-align:left; margin-top:3%">Si mon profil vous intéresse vous pouvez me contacter par mail </div>
+        <div style="text-align:left; margin-top:3%"><a download="#">Mon <span class="colorBlue">CV</span></a></div>
+    </div>
+</div>
 
 
 <script>
