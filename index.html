@@ -1,39 +1,200 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Alex Contussi </title>
-    <link href="https://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.css" integrity="sha512-LaxQmGd9k/pW51CsEy2nLIlbUXCgsyvUEVT5fSguN2b2OBwHjMi2aiUdEEXSMg8Jvy+bCB01as61aNrHnL2DYQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
 <style>
-
-body{background:#1e1e1e;color:#FFF;text-align: center;}
-#container{display:grid;grid-template-rows: 1fr 10fr 1fr;height:100vh;grid-gap: 20px;}
-#container div{border:#fff solid 1px}
+body{background-color:#282C33;height: 200vh;color:#FFF;font-family:'fira code';}
+#profil{grid-template-columns:repeat(2,1fr);}
+#profil div{text-align:center;height:363px}
+.grids{display:grid;margin-top:7%}
+.colorBlue{color:#96FAF6}
+.tLeft{text-align:left!important}
+.mTop{margin-top:6%}
+.line{background-color: #96FAF6; height: 2px; width: 66%; display: inline-block; margin-left: 2%;}
+.w35{width:35%!important}
+#projets{margin-left:7%}
+#carousel {
+  position: relative;
+  height: 800px;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden; 
+}
+#carousel div {
+    position: absolute;
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s;
+    opacity: 1; 
+}
+#carousel div img {
+    width: 1500px;
+    height:800px;
+    transition: width 1s; 
+}
+#carousel div.hideLeft {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%); 
+}
+#carousel div.hideLeft img { width: 200px; }
+#carousel div.hideRight {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(50%) translateX(-50%); 
+}
+#carousel div.hideRight img {width: 200px; }
+#carousel div.prev {
+    z-index: 5;
+    left: 30%;
+    transform: translateY(0px) translateX(-50%); 
+}
+#carousel div.prev img { width: 300px; }
+#carousel div.prevLeftSecond {
+    z-index: 4;
+    left: 15%;
+    transform: translateY(0px) translateX(-50%);
+    opacity: .7; 
+}
+#carousel div.prevLeftSecond img { width: 200px; }
+#carousel div.selected {
+    z-index: 10;
+    left: 50%;
+    transform: translateY(0px) translateX(-50%);
+}
+#carousel div.next {
+    z-index: 5;
+    left: 70%;
+    transform: translateY(50px) translateX(-50%); 
+}
+#carousel div.next img { width: 300px; }
+#carousel div.nextRightSecond {
+    z-index: 4;
+    left: 85%;
+    transform: translateY(50%) translateX(-50%);
+    opacity: .7; 
+}
+#carousel div.nextRightSecond img { width: 200px; }
+.buttons {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px; 
+}
 
 </style>
-<body>
-<div id="container">
-    <div class="header"><h1>Contussi Alex</h1></div>
-    <div class="body"></div>
-    <div class="footer"></div>
+<div id="profil" class="grids">
+    <div>
+        <h2>Alex Contussi <span class="colorBlue">DEVELOPPEUR</span></h2>
+        <div><small>Alternant en BTS SIO</small></div>
+    </div>
+    <div><img class="mTop" src="\C:\Users\Alex Contussi\Desktop\motif.png" height="240"/></div>
+    <div><img class="mTop" src="\C:\Users\Alex Contussi\Desktop\motif.png" height="240"/></div>
+    <div class="tLeft">
+        <h2><span class="colorBlue">#</span>Mon profil<span class="line"></span></h2>
+        <span>Je m’appelle Alex Contussi</span><br><br>
+        <span>Je suis actuelement en bts sio,  une formation que j’effectu en alternance avec l’entreprise LOVERADIUS.</span><br><br>
+        <span>A travers plusieurs projets dans différents langages lors de la formation et durant les périodes d’entreprise j’ai pu acquérir plusieurs qualifications et notament en programmation orientée objet.</span><br><br>
+        <span>La grande partie de mes projets sont réalisés sur le framework Symfony.</span>
+    </div>
+</div>
+<div id="projets" class="grids">
+    <div>
+        <h2><span class="colorBlue">#</span>Mes projets<span class="line w35"></span></h2>
+    </div>
+    <div id="carousel">
+        <div class="hideLeft">
+            <img src="\C:\Users\Alex Contussi\Desktop\gp.PNG">
+        </div>
+        <div class="prevLeftSecond">
+            <img src="\C:\Users\Alex Contussi\Desktop\gpProd.PNG">
+        </div>
+
+        <div class="prev">
+            <img src="\C:\Users\Alex Contussi\Desktop\crmMapDepartement.PNG">
+        </div>
+
+        <div class="selected">
+            <img src="\C:\Users\Alex Contussi\Desktop\crmMapClients.png">
+        </div>
+
+        <div class="next">
+            <img src="\C:\Users\Alex Contussi\Desktop\defi.PNG">
+        </div>
+
+        <div class="nextRightSecond">
+            <img src="\C:\Users\Alex Contussi\Desktop\achatLR.png">
+        </div>
+
+        <div class="hideRight">
+            <img src="\C:\Users\Alex Contussi\Desktop\achatLRShipment.PNG">
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+    </div>
 </div>
 
 
 
-
-
-</body>
-
 <script>
+  function moveToSelected(element) {
 
+  if (element == "next") {
+    var selected = $(".selected").next();
+  } else if (element == "prev") {
+    var selected = $(".selected").prev();
+  } else {
+    var selected = element;
+  }
 
+  var next = $(selected).next();
+  var prev = $(selected).prev();
+  var prevSecond = $(prev).prev();
+  var nextSecond = $(next).next();
 
+  $(selected).removeClass().addClass("selected");
+
+  $(prev).removeClass().addClass("prev");
+  $(next).removeClass().addClass("next");
+
+  $(nextSecond).removeClass().addClass("nextRightSecond");
+  $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+  $(nextSecond).nextAll().removeClass().addClass('hideRight');
+  $(prevSecond).prevAll().removeClass().addClass('hideLeft');
+
+}
+
+$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: 
+        moveToSelected('prev');
+        break;
+
+        case 39: 
+        moveToSelected('next');
+        break;
+
+        default: return;
+    }
+    e.preventDefault();
+});
+
+$('#carousel div').click(function() {
+  moveToSelected($(this));
+});
+
+$('#prev').click(function() {
+  moveToSelected('prev');
+});
+
+$('#next').click(function() {
+  moveToSelected('next');
+});
 </script>
-
