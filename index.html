@@ -11,6 +11,7 @@
 </head>
 <style>
 body{background-color:#282C33;height: 200vh;color:#FFF;font-family:'fira code';}
+#allPage {display: grid;grid-template-columns: 0.2fr 2fr 0.2fr;}
 #profil{grid-template-columns:repeat(2,1fr);}
 #profil div{text-align:center;height:363px}
 .grids{display:grid;margin-top:7%}
@@ -94,84 +95,89 @@ img{border-radius: 20px;}
 .tRight{text-align:right}
 
 </style>
-<div id="profil" class="grids">
+<div id="allPage">
+    <div></div>
     <div>
-        <h2>Alex Contussi <span class="colorBlue">DEVELOPPEUR</span></h2>
-        <div><small>Alternant en BTS SIO</small></div>
+        <div id="profil" class="grids">
+            <div>
+                <h2>Alex Contussi <span class="colorBlue">DEVELOPPEUR</span></h2>
+                <div><small>Alternant en BTS SIO</small></div>
+            </div>
+            <div><img class="mTop" src="motif.PNG" height="240"/></div>
+            <div><img class="mTop" src="motif.PNG" height="240"/></div>
+            <div class="tLeft">
+                <h2><span class="colorBlue">#</span>Mon profil<span class="line"></span></h2>
+                <span>Je m’appelle Alex Contussi</span><br><br>
+                <span>Je suis actuelement en bts sio,  une formation que j’effectue en alternance avec l’entreprise LOVERADIUS.</span><br><br>
+                <span>A travers plusieurs projets dans différents langages lors de la formation et durant les périodes d’entreprise j’ai pu acquérir plusieurs qualifications et notament en programmation orientée objet.</span><br><br>
+                <span>La grande partie de mes projets sont réalisés sur le framework Symfony.</span>
+            </div>
+        </div>
+        <div id="projets" class="grids">
+            <div>
+                <h2><span class="colorBlue">#</span>Mes projets<span class="line w35"></span></h2>
+            </div>
+            <div id="carousel">
+                <div class="hideLeft">
+                    <img src="gp.PNG">
+                </div>
+                <div class="prevLeftSecond">
+                    <img src="gpProd.PNG">
+                </div>
+
+                <div class="prev">
+                    <img src="crmMapDepartement.PNG">
+                </div>
+
+                <div class="selected">
+                    <img src="crmMapClients.PNG">
+                </div>
+
+                <div class="next">
+                    <img src="defi.png">
+                </div>
+
+                <div class="nextRightSecond">
+                    <img src="achatLR.PNG">
+                </div>
+
+                <div class="hideRight">
+                    <img src="achatLRShipment.PNG">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev" class="btn btn-light">Prev</button>
+                <button id="next" class="btn btn-light">Next</button>
+            </div>
+        </div>
+        <div id="contact" class="grids">
+            <div class="tLeft">
+                <h2><span class="colorBlue">#</span>Skills<span class="line w35"></span></h2>
+                <div style="text-align:center"><img class="mTop" src="motif.PNG" height="240"/></div>
+            </div>
+            <div style="padding: 5%;text-align: center;">
+                <div class="mb10">Symfony</div>
+                <div class="mb10">PHP</div>
+                <div class="mb10">Doctrine</div>
+                <div class="mb10">Javascript</div>
+                <div class="mb10">HTML</div>
+                <div class="mb10">CSS</div>
+                <div class="mb10">SQL</div>
+                <div>Java</div>
+            </div>
+
+            <div style="padding: 20%;text-align: center;">
+                <div style="padding:10%;border:1px solid #FFF"><a href="mailto:alexcontussi01032000@gmail.com">alexcontussi01032000@gmail.com</a></div>
+            </div>
+            <div class="tLeft mTop">
+                <h2><span class="colorBlue">#</span>Contact<span class="line w35"></span></h2>
+                <div style="text-align:left; margin-top:3%">Si mon profil vous intéresse vous pouvez me contacter par mail </div>
+                <div style="text-align:left; margin-top:3%"><a download="Contussi-Alex.pdf">Mon <span class="colorBlue">CV</span></a></div>
+            </div>
+        </div>
     </div>
-    <div><img class="mTop" src="motif.PNG" height="240"/></div>
-    <div><img class="mTop" src="motif.PNG" height="240"/></div>
-    <div class="tLeft">
-        <h2><span class="colorBlue">#</span>Mon profil<span class="line"></span></h2>
-        <span>Je m’appelle Alex Contussi</span><br><br>
-        <span>Je suis actuelement en bts sio,  une formation que j’effectue en alternance avec l’entreprise LOVERADIUS.</span><br><br>
-        <span>A travers plusieurs projets dans différents langages lors de la formation et durant les périodes d’entreprise j’ai pu acquérir plusieurs qualifications et notament en programmation orientée objet.</span><br><br>
-        <span>La grande partie de mes projets sont réalisés sur le framework Symfony.</span>
-    </div>
+    <div></div>
 </div>
-<div id="projets" class="grids">
-    <div>
-        <h2><span class="colorBlue">#</span>Mes projets<span class="line w35"></span></h2>
-    </div>
-    <div id="carousel">
-        <div class="hideLeft">
-            <img src="gp.PNG">
-        </div>
-        <div class="prevLeftSecond">
-            <img src="gpProd.PNG">
-        </div>
-
-        <div class="prev">
-            <img src="crmMapDepartement.PNG">
-        </div>
-
-        <div class="selected">
-            <img src="crmMapClients.PNG">
-        </div>
-
-        <div class="next">
-            <img src="defi.png">
-        </div>
-
-        <div class="nextRightSecond">
-            <img src="achatLR.PNG">
-        </div>
-
-        <div class="hideRight">
-            <img src="achatLRShipment.PNG">
-        </div>
-    </div>
-    <div class="buttons">
-        <button id="prev" class="btn btn-light">Prev</button>
-        <button id="next" class="btn btn-light">Next</button>
-    </div>
-</div>
-<div id="contact" class="grids">
-    <div class="tLeft">
-        <h2><span class="colorBlue">#</span>Skills<span class="line w35"></span></h2>
-        <div style="text-align:center"><img class="mTop" src="motif.PNG" height="240"/></div>
-    </div>
-    <div style="padding: 5%;text-align: center;">
-        <div class="mb10">Symfony</div>
-        <div class="mb10">PHP</div>
-        <div class="mb10">Doctrine</div>
-        <div class="mb10">Javascript</div>
-        <div class="mb10">HTML</div>
-        <div class="mb10">CSS</div>
-        <div class="mb10">SQL</div>
-        <div>Java</div>
-    </div>
-
-    <div style="padding: 20%;text-align: center;">
-        <div style="padding:10%;border:1px solid #FFF"><a href="mailto:alexcontussi01032000@gmail.com">alexcontussi01032000@gmail.com</a></div>
-    </div>
-    <div class="tLeft mTop">
-        <h2><span class="colorBlue">#</span>Contact<span class="line w35"></span></h2>
-        <div style="text-align:left; margin-top:3%">Si mon profil vous intéresse vous pouvez me contacter par mail </div>
-        <div style="text-align:left; margin-top:3%"><a download="Contussi-Alex.pdf">Mon <span class="colorBlue">CV</span></a></div>
-    </div>
-</div>
-
 
 <script>
   function moveToSelected(element) {
